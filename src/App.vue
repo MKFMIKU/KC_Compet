@@ -2,15 +2,15 @@
   <div id="app">
     <router-view></router-view>
 
-    <Footer></Footer>
+    <FooterCLF></FooterCLF>
   </div>
 </template>
 
 <script>
-  import Footer from './components/Footer.vue'
+  import FooterCLF from './components/Footer.vue'
   export default {
     components: {
-      Footer
+      FooterCLF
     }
   }
 </script>

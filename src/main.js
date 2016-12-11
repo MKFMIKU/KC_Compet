@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 import App from './App'
 import routes from './routes'
 
+import 'element-ui/lib/theme-default/index.css'
+import ElementUI from 'element-ui'
+Vue.use(ElementUI)
+
 const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes
