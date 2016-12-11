@@ -1,3 +1,16 @@
-#JXNUCompet
+# jxnu
 
-This is a personal website for JXNU.
+> A Vue.js project for JXNU
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
