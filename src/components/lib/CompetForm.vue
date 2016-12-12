@@ -50,10 +50,11 @@
         var data = {
           name: this.compet.name,
           school: this.compet.school,
-          beginSign: this.compet.beginSign.toDateString(),
-          endSign: this.compet.endSign.toDateString(),
-          date: this.compet.date.toDateString(),
-          profile: this.profile
+          beginSign: this.compet.beginSign.toString(),
+          endSign: this.compet.endSign.toString(),
+          date: this.compet.date.toString(),
+          profile: this.profile,
+          status: true
         }
         this.$http.post('/compet', data, {
           emulateJSON: true,
@@ -61,9 +62,9 @@
             'content-type': 'application/x-www-form-urlencoded'
           }
         }).then((response) => {
-          console.log(response)
+          if (response.body.code === 200) this.$message('添加成功')
         }, (response) => {
-          console.log(response)
+          this.$message.error('添加失败')
         })
       }
     }

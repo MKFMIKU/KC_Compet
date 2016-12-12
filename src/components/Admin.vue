@@ -24,7 +24,7 @@
       color: #222;
     }
     .board{
-      width: 720px;
+      width: 980px;
       margin: 2rem auto;
     }
   }
