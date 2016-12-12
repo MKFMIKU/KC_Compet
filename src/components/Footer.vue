@@ -22,7 +22,8 @@
     width: 100%;
     display: block;
     background-color: #F2F4F6;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     text-align: left;
     box-sizing: border-box;
     @media screen and (min-width: 800px) {

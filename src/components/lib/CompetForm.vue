@@ -22,6 +22,9 @@
         <el-form-item label="比赛描述">
           <el-input type="textarea" v-model="compet.profile"></el-input>
         </el-form-item>
+        <el-form-item>
+          <el-button type="primary">立即创建</el-button>
+        </el-form-item>
       </el-form>
     </div>
 </template>
