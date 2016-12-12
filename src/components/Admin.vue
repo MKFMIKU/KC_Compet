@@ -7,7 +7,7 @@
           <el-menu-item index="2-1"><router-link to="/admin/form">添加比赛</router-link></el-menu-item>
           <el-menu-item index="2-2"><router-link to="/admin/list">修改比赛</router-link></el-menu-item>
         </el-submenu>
-        <el-menu-item index="3">比赛列表</el-menu-item>
+        <el-menu-item index="3"><router-link to="/compets">比赛列表</router-link></el-menu-item>
       </el-menu>
 
       <div class="board">
@@ -21,11 +21,11 @@
     height: 100%;
     a{
       text-decoration: none;
-      color: #222;
+      color: #c0ccda;
     }
     .board{
       width: 980px;
-      margin: 2rem auto;
+      margin: 4rem auto 100px;
     }
   }
 </style>

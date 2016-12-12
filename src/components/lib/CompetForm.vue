@@ -47,13 +47,17 @@
     },
     methods: {
       onSubmit () {
+        function timeFormat (time) {
+          return time.getFullYear() + '-' + time.getMonth() + '-' + time.getDate()
+        }
+        console.log(timeFormat(this.compet.endSign))
         var data = {
           name: this.compet.name,
           school: this.compet.school,
-          beginSign: this.compet.beginSign.toString(),
-          endSign: this.compet.endSign.toString(),
-          date: this.compet.date.toString(),
-          profile: this.profile,
+          beginSign: timeFormat(this.compet.beginSign),
+          endSign: timeFormat(this.compet.endSign),
+          date: timeFormat(this.compet.date),
+          profile: this.compet.profile,
           status: true
         }
         this.$http.post('/compet', data, {

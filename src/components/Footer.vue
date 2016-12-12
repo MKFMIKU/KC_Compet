@@ -22,10 +22,11 @@
     width: 100%;
     display: block;
     background-color: #F2F4F6;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-align: left;
     box-sizing: border-box;
+    z-index: 999;
     @media screen and (min-width: 800px) {
       padding: 0 16%;
     }

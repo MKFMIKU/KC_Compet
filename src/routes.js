@@ -1,13 +1,14 @@
-import Admin from './components/Admin.vue'
-import Compet from './components/Compet.vue'
-
-import CompetForm from './components/lib/CompetForm.vue'
-import CompetList from './components/lib/CompetList.vue'
+const Admin = resolve => require(['./components/Admin.vue'], resolve)
+const Compet = resolve => require(['./components/Compet.vue'], resolve)
+const List = resolve => require(['./components/List.vue'], resolve)
+const CompetForm = resolve => require(['./components/lib/CompetForm.vue'], resolve)
+const CompetList = resolve => require(['./components/lib/CompetList.vue'], resolve)
 
 export default [
-  { path: '/', redirect: '/compet' },
+  {path: '/', redirect: '/compets'},
+  {path: '/compets', component: List},
   {path: '/compet', component: Compet},
-  { path: '/admin',
+  {path: '/admin',
     component: Admin,
     children: [
       {

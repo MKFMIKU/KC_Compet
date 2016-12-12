@@ -26,6 +26,10 @@ module.exports = {
         target: 'http://localhost:3000/',
         changeOrigin: true
       },
+      '/compet/*': {
+        target: 'http://localhost:3000/',
+        changeOrigin: true
+      },
       '/remove': {
         target: 'http://localhost:3000/',
         changeOrigin: true
