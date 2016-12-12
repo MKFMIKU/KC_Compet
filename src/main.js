@@ -11,6 +11,9 @@ import 'element-ui/lib/theme-default/index.css'
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
+var VueResource = require('vue-resource')
+Vue.use(VueResource)
+
 const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes
