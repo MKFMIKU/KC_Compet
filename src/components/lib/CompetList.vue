@@ -56,7 +56,7 @@ export default{
   },
   methods: {
     deletCompet: function (index) {
-      this.$http.get('/remove/' + this.list[index]._id).then((res) => {
+      this.$http.get('http://kcc.kfnoon.com/remove/' + this.list[index]._id).then((res) => {
         if (res.body.code === 200) {
           this.$message('删除成功')
           this.list.splice(index, 1)
@@ -65,7 +65,7 @@ export default{
     }
   },
   mounted: function () {
-    this.$http.get('/compet').then((res) => {
+    this.$http.get('http://kcc.kfnoon.com/compet/').then((res) => {
       this.list = res.body.compets
     })
   }

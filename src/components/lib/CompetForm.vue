@@ -50,7 +50,6 @@
         function timeFormat (time) {
           return time.getFullYear() + '-' + time.getMonth() + '-' + time.getDate()
         }
-        console.log(timeFormat(this.compet.endSign))
         var data = {
           name: this.compet.name,
           school: this.compet.school,
@@ -60,7 +59,7 @@
           profile: this.compet.profile,
           status: true
         }
-        this.$http.post('/compet', data, {
+        this.$http.post('http://kcc.kfnoon.com/compet', data, {
           emulateJSON: true,
           headers: {
             'content-type': 'application/x-www-form-urlencoded'

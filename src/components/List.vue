@@ -21,7 +21,7 @@
 <style lang="scss">
   .compets{
     width: 100%;
-    height: 100%;
+    height: 720px;
     background: url('../assets/random.jpg');
     box-sizing: border-box;
     padding-top: 2rem;
@@ -79,11 +79,11 @@ export default{
   },
   methods: {
     go: function (index) {
-      this.$router.push({path: '/compet', query: { id: index }})
+      this.$router.push({path: '../compet', query: { id: index }})
     }
   },
   mounted: function () {
-    this.$http.get('/compet').then((res) => {
+    this.$http.get('http://kcc.kfnoon.com/compet/').then((res) => {
       this.list = res.body.compets
     })
   }

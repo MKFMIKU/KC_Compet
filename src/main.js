@@ -13,6 +13,7 @@ Vue.use(ElementUI)
 
 var VueResource = require('vue-resource')
 Vue.use(VueResource)
+Vue.http.options.xhr = { withCredentials: true }
 
 const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),

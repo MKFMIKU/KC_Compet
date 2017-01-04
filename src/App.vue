@@ -27,6 +27,14 @@ html,body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  height: 100%;
+  height: auto;
 }
+  #lv-container{
+    width: 960px;
+    margin: 4rem auto 4rem;
+    @media screen and (max-width: 540px) {
+      width: 100%;
+      margin: 2rem 0;
+    }
+  }
 </style>

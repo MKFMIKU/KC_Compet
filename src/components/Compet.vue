@@ -9,13 +9,13 @@
         <p>报名开始: {{ compet.beginSign }}</p>
         <p>报名结束: {{ compet.endSign }}</p>
       </div>
-      <div id="uyan_frame"></div>
     </div>
 </template>
 <style lang="scss">
   .compet{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     h1{
       line-height: 320px;
       color: #fff;
@@ -67,14 +67,6 @@
       }
     }
   }
-  #uyan_frame{
-    width: 960px;
-    margin: 0 auto;
-    @media screen and (max-width: 540px) {
-      width: 100%;
-      margin: 2rem 1rem;
-    }
-  }
 </style>
 <script>
   export default{
@@ -84,7 +76,7 @@
       }
     },
     mounted: function () {
-      this.$http.get('/compet/' + this.$route.query.id).then((res) => {
+      this.$http.get('http://kcc.kfnoon.com/compet/' + this.$route.query.id).then((res) => {
         this.compet = res.body.compet
       })
     }
